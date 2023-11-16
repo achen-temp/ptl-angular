@@ -1,0 +1,58 @@
+<section>
+    <div>
+        <div>
+            <h1>Now you have selected {{userSelectedCar.model}}. Please enter your info to book test drive.</h1>
+        </div>
+        <div id="header">
+            <h1>Enter your personal info - Template Driven Form</h1>
+        </div>
+        <div id="body">
+            <form (ngSubmit)="submitForm()" #userInfoForm="ngForm">
+                <div>
+                    <label>Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="please enter your name" [(ngModel)]="userInfo.name" #userName="ngModel">
+                    <p style="background-color: red;" [hidden]="userInfoForm.name != null">Name is a required field</p>
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="text" id="email" name="email" required placeholder="please enter your email" [(ngModel)]="userInfo.email" #userEmail="ngModel">
+                </div>
+                <div>
+                    <label>Zip:</label>
+                    <input type="text" id="zip" name="zip" required placeholder="please enter your zip" [(ngModel)]="userInfo.zip" #userZip="ngModel">
+                </div>
+                <br>
+                <br>
+                <button type="submit" [disabled]="!allFieldsEntered()">Submit</button>
+                <button type="reset" [disabled]="!userInfoForm.form.dirty">Clear</button>
+
+            </form>
+        </div>
+
+        <div id="header">
+            <h1>Enter your personal info - Reactive Driven Form</h1>
+        </div>
+        <div id="body2">
+            <form (ngSubmit)="submitReactiveForm()" [formGroup]="userInfoReactiveForm">
+                <div>
+                    <label>Name:</label>
+                    <input type="text" id="name1" name="name1" required placeholder="please enter your name" formControlName="name">
+                    <p style="background-color: red;" [hidden]="userInfoReactiveForm.value.name">Name is a required field</p>
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="text" id="email1" name="email1" required placeholder="please enter your email" formControlName="email">
+                </div>
+                <div>
+                    <label>Zip:</label>
+                    <input type="text" id="zip" name="zip" required placeholder="please enter your zip" formControlName="zip">
+                </div>
+                <br>
+                <br>
+                <button type="submit" [disabled]="">Submit - Reactive</button>
+                <button type="reset" [disabled]="!userInfoReactiveForm.dirty">Clear - Reactive</button>
+
+            </form>
+        </div>
+    </div>
+</section>

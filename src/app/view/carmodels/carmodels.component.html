@@ -1,0 +1,11 @@
+<section>
+    <h1>Test Drive</h1>
+</section>
+<section>
+    <app-car *ngFor="let car of cars;" [car]="car" (selectedCar)="userSelected($event)"  #childCar>This is a car component</app-car>
+</section>
+<br>
+<br>
+<div style="margin-top: 20%;" *ngIf="selectedCar">
+    <h1>Congratuations, you have selected {{selectedCar.model}}</h1>
+</div>

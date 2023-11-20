@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { Car } from 'src/app/model/car.model';
@@ -10,7 +10,7 @@ import { CarService } from 'src/app/service/car.service';
   templateUrl: './user-info.component.html',
   styleUrls: ['./user-info.component.css']
 })
-export class UserInfoComponent implements OnInit, OnDestroy{
+export class UserInfoComponent implements OnInit, OnDestroy {
 
   userInfo: UserInfo = new UserInfo('','','');
 

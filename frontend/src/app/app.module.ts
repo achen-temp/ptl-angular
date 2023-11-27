@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyUpperCasePipe } from './util/my-upper-case.pipe';
 import { UserInfoComponent } from './view/user-info/user-info.component';
 import { CarComponent } from './view/car/car.component';
+import { AppointmentComponent } from './view/appointment/appointment.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CarComponent } from './view/car/car.component';
     CarmodelsComponent,
     MyUpperCasePipe,
     UserInfoComponent,
-    CarComponent
+    CarComponent,
+    AppointmentComponent
   ],
   imports: [
     BrowserModule,

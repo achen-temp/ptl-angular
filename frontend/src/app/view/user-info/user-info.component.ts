@@ -41,20 +41,6 @@ export class UserInfoComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
-  //------------------------start of reactive form--------------------//
-  userInfoReactiveForm = new FormGroup({
-      name: new FormControl(''),
-      email: new FormControl(''),
-      zip: new FormControl(''),
-  })
-
-
-  submitReactiveForm(){
-    //debugger;
-    console.log(this.userInfoReactiveForm);
-  }
-
-
   
 }
 

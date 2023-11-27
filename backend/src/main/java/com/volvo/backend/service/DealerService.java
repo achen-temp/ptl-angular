@@ -27,7 +27,7 @@ public class DealerService {
             dealer.setZip("1000" + i);
             Map<String, Boolean> slots = new HashMap<>();
             slots.put("2023-11-20 Morning", true);
-            slots.put("2023-11-20 Afternoon", false);
+            slots.put("2023-11-20 Afternoon", true);
             slots.put("2023-11-20 Evening", true);
             dealer.setSlots(slots);
             list.add(dealer);
